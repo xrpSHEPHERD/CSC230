@@ -21,7 +21,37 @@
 */
 
 
+/* Main Structural Styles 
+
 /* Main Structural Styles */
+
+/* Set background color for the entire HTML document */
+html {
+   background-color: hsl(27, 72%, 72%);
+}
+
+/* Body element styles */
+body {
+   color: rgb(91, 91, 91);
+   background-color: ivory;
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+/* Footer address styles */
+body > footer address {
+   background-color: rgb(222, 128, 60);
+   color: rgba(255, 255, 255, 0.6);
+   font-style: normal;
+   font-weight: bold;
+   font-variant: small-caps;
+   font-size: 0.9em;
+   line-height: 3em;
+   font-family: "Nobile", Verdana, Geneva, sans-serif;
+   text-align: center;
+}
+
+
+*/
 
 
 
