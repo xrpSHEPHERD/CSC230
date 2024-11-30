@@ -21,8 +21,6 @@
 */
 
 
-/* Main Structural Styles 
-
 /* Main Structural Styles */
 
 /* Set background color for the entire HTML document */
@@ -50,13 +48,31 @@ body > footer address {
    text-align: center;
 }
 
-
-*/
-
-
-
-
 /* Heading Styles */
+/* Heading Styles */
+
+/* Style for h1 elements */
+h1 {
+   font-weight: normal;
+   font-family: "Nobile", Verdana, Geneva, sans-serif;
+   letter-spacing: 0.2em;
+   margin: 0;
+}
+
+/* Style for main h1 heading in the coaches section */
+section#tss_coaches h1 {
+   font-size: 2.5em;
+   color: hsl(27, 82%, 85%);
+   background-color: hsl(27, 6%, 21%);
+   padding-left: 10px;
+}
+
+/* Style for h2 headings in coach bios */
+article.coach_bio h2 {
+   font-size: 1.6em;
+   font-weight: normal;
+   color: rgb(240, 125, 0);
+}
 
 
 
