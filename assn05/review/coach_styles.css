@@ -148,7 +148,13 @@ p {
 
 /* List Styles */
 
+/* Style for coach accomplishments lists */
 
+article.coach_bio > header > ul {
+   list-style-image: url("check.png");
+   margin: 0;
+   margin-bottom: 10px;
+}
 
 
 
