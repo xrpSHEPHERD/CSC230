@@ -49,7 +49,6 @@ body > footer address {
 }
 
 /* Heading Styles */
-/* Heading Styles */
 
 /* Style for h1 elements */
 h1 {
@@ -73,10 +72,6 @@ article.coach_bio h2 {
    font-weight: normal;
    color: rgb(240, 125, 0);
 }
-
-
-
-/* Blockquote Styles */
 
 /* Blockquote Styles */
 
@@ -106,8 +101,6 @@ aside blockquote::after {
    font-weight: bold;
 }
 
-
-/* Navigation Styles */	
 
 /* Navigation Styles */
 
@@ -147,6 +140,10 @@ nav > ul > li a:active {
 
 /* Paragraph Styles */
 
+/* Style for all paragraphs */
+p {
+   margin: 10px 30px 10px 0;
+}
 
 
 /* List Styles */
