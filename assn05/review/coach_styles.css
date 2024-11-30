@@ -78,7 +78,33 @@ article.coach_bio h2 {
 
 /* Blockquote Styles */
 
+/* Blockquote Styles */
 
+/* Style for blockquotes within asides */
+aside blockquote {
+   font-size: 0.95em;
+   font-family: 'Comic Sans MS', cursive;
+   color: rgb(222, 128, 60);
+   background-color: rgba(255, 255, 255, 0.75);
+   padding: 10px;
+   quotes: "\201C" "\201D";
+}
+
+/* Opening quote before blockquotes */
+aside blockquote::before {
+   content: open-quote;
+   font-size: 1.6em;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+}
+
+/* Closing quote after blockquotes */
+aside blockquote::after {
+   content: close-quote;
+   font-size: 1.6em;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+}
 
 
 /* Navigation Styles */	
