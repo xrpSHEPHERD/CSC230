@@ -59,6 +59,12 @@ footer {
    background-color: rgb(71, 52, 29); /* Dark brown background */
 }
 
+footer::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
 footer > nav.verticalNavigation {
    float: left;
    width: 22%; /* Each navigation list takes 22% of the footer width */
