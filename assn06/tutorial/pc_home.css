@@ -38,8 +38,20 @@ section#leftColumn {
 
 /* Right Column Styles */
 section#rightColumn {
-   float: left;      /* Floats the column to the left, alongside the left column */
+   float: left;      /* Floats the column alongside the left column */
    width: 67%;       /* Sets the column width to 67% of the body width */
 }
+
+section#rightColumn img {
+   display: block;   /* Displays images as block elements */
+   width: 100%;      /* Sets image width to match the parent element */
+}
+
+section#rightColumn > nav.horizontalNavigation li {
+   width: 25%;       /* Sets list items to 25% of the width of the navigation list */
+   float: left;      /* Floats each item to align them horizontally */
+   text-align: center; /* Centers the text and image within the list item */
+}
+
 
 
