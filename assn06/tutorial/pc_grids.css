@@ -19,8 +19,10 @@ body {
    gap: 20px; /* Space between rows and columns */
 }
 
-header {
-   grid-column: 1 / -1; /* Header spans all columns */
+/* Spanning the Body Header Across the First Row */
+body > header {
+   grid-row: 1; /* Place header in the first row */
+   grid-column: 1 / -1; /* Span header across all columns */
 }
 
 main {
