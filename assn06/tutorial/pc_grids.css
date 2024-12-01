@@ -24,41 +24,48 @@ header {
 }
 
 main {
-   display: contents; /* Allows child elements to participate in the grid */
+   display: grid; /* Set main as a grid container */
+   grid-template-rows: auto auto; /* First row for #companyInfo, second row for #nestedGrid and #faq */
+   grid-template-columns: 2fr 1fr; /* 2:1 ratio for the main content columns */
+   gap: 20px; /* Space between rows and columns */
 }
 
 #companyInfo {
-   grid-column: 1; /* Places company info in the first column */
+   grid-column: 1 / -1; /* Spans across both columns */
+   grid-row: 1; /* Place in the first row */
+}
+
+#nestedGrid {
+   grid-column: 1; /* Places the nested grid in the first column */
+   grid-row: 2; /* Place in the second row */
 }
 
 #faq {
    grid-column: 2; /* Places FAQ in the second column */
+   grid-row: 2; /* Place in the second row */
 }
 
 .nestedGrid {
    display: grid; /* Nested grid for the articles */
    grid-template-rows: 1fr 1fr; /* Two rows */
-   grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+   grid-template-columns: 1fr 1fr; /* Two columns with equal width */
    gap: 10px; /* Space between nested grid items */
-   grid-template-areas: /* Define grid areas */
-      "about enjoying"
-      "healthy single-origin";
 }
 
 .nestedGrid article:nth-child(1) {
-   grid-area: about; /* Place first article in the "about" area */
+   grid-area: 1 / 1; /* Top-left */
 }
 
 .nestedGrid article:nth-child(2) {
-   grid-area: enjoying; /* Place second article in the "enjoying" area */
+   grid-area: 1 / 2; /* Top-right */
 }
 
 .nestedGrid article:nth-child(3) {
-   grid-area: healthy; /* Place third article in the "healthy" area */
+   grid-area: 2 / 1; /* Bottom-left */
 }
 
 .nestedGrid article:nth-child(4) {
-   grid-area: single-origin; /* Place fourth article in the "single-origin" area */
+   grid-area: 2 / 2; /* Bottom-right */
 }
 
 footer {
