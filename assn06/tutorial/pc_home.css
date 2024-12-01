@@ -36,3 +36,10 @@ section#leftColumn {
    width: 33%;       /* Sets the column width to 33% of the body width */
 }
 
+/* Right Column Styles */
+section#rightColumn {
+   float: left;      /* Floats the column to the left, alongside the left column */
+   width: 67%;       /* Sets the column width to 67% of the body width */
+}
+
+
