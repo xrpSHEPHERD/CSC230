@@ -11,7 +11,7 @@
    Filename: pc_grids.css
 */
 
-/* Grid Rows and Columns Styles */
+/* Grid Layout for Page */
 body {
    display: grid; /* Set the body as a grid container */
    grid-template-rows: auto 1fr auto; /* Header, main content, footer */
@@ -37,8 +37,28 @@ main {
 
 .nestedGrid {
    display: grid; /* Nested grid for the articles */
+   grid-template-rows: 1fr 1fr; /* Two rows */
    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
    gap: 10px; /* Space between nested grid items */
+   grid-template-areas: /* Define grid areas */
+      "about enjoying"
+      "healthy single-origin";
+}
+
+.nestedGrid article:nth-child(1) {
+   grid-area: about; /* Place first article in the "about" area */
+}
+
+.nestedGrid article:nth-child(2) {
+   grid-area: enjoying; /* Place second article in the "enjoying" area */
+}
+
+.nestedGrid article:nth-child(3) {
+   grid-area: healthy; /* Place third article in the "healthy" area */
+}
+
+.nestedGrid article:nth-child(4) {
+   grid-area: single-origin; /* Place fourth article in the "single-origin" area */
 }
 
 footer {
@@ -49,7 +69,7 @@ footer {
    padding: 10px;
 }
 
-/* Grid Outline Styles */
+/* Grid Outline Styles for Debugging */
 body > * {
    outline: 2px dashed red; /* Red outline for children of the body element */
 }
