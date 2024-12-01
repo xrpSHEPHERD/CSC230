@@ -14,11 +14,11 @@
 
 
 /* Grid Rows Styles */
-body {
-   display: grid;              /* Defines the body as a grid container */
-   grid-template-rows: auto 1fr auto; /* Defines three rows: header, content, footer */
-   grid-template-columns: 1fr 1fr;    /* Two columns: company info and FAQ */
-   gap: 20px;                 /* Adds space between rows and columns */
+section.nestedGrid {
+   display: grid;                /* Defines the section as a nested grid container */
+   grid-template-rows: 1fr 1fr;  /* Two rows */
+   grid-template-columns: 1fr 1fr; /* Two columns */
+   gap: 10px;                   /* Adds space between grid items */
 }
 
 
