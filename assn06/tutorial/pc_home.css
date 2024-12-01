@@ -56,6 +56,7 @@ section#rightColumn > nav.horizontalNavigation li {
 /* Footer Styles */
 footer {
    clear: left; /* Ensures footer appears below floated elements */
+   background-color: rgb(71, 52, 29); /* Dark brown background */
 }
 
 footer > nav.verticalNavigation {
