@@ -17,9 +17,10 @@
 section.nestedGrid {
    display: grid;                /* Defines the section as a nested grid container */
    grid-template-rows: 1fr 1fr;  /* Two rows */
-   grid-template-columns: 1fr 1fr; /* Two columns */
-   gap: 10px;                   /* Adds space between grid items */
+   grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+   gap: 10px;                    /* Adds space between grid items */
 }
+
 
 
 
