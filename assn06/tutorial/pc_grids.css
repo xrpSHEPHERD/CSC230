@@ -9,29 +9,51 @@
    Date:   12/1/2024
    
    Filename: pc_grids.css
-
 */
 
-
-/* Grid Rows Styles */
-section.nestedGrid {
-   display: grid;                /* Defines the section as a nested grid container */
-   grid-template-rows: 1fr 1fr;  /* Two rows */
-   grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-   gap: 10px;                    /* Adds space between grid items */
-}
-
-
-
-
-
-/* Grid Columns Styles */
+/* Grid Rows and Columns Styles */
 body {
-   grid-template-columns: 2fr 1fr; /* First column is twice the width of the second */
+   display: grid; /* Set the body as a grid container */
+   grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+   grid-template-columns: 2fr 1fr; /* Main content columns: 2:1 ratio */
+   gap: 20px; /* Space between rows and columns */
 }
 
+header {
+   grid-column: 1 / -1; /* Header spans all columns */
+}
 
+main {
+   display: contents; /* Allows child elements to participate in the grid */
+}
 
+#companyInfo {
+   grid-column: 1; /* Places company info in the first column */
+}
+
+#faq {
+   grid-column: 2; /* Places FAQ in the second column */
+}
+
+.nestedGrid {
+   display: grid; /* Nested grid for the articles */
+   grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+   gap: 10px; /* Space between nested grid items */
+}
+
+footer {
+   grid-column: 1 / -1; /* Footer spans all columns */
+   text-align: center;
+   background-color: rgb(71, 52, 29); /* Dark brown background */
+   color: white; /* White text for contrast */
+   padding: 10px;
+}
 
 /* Grid Outline Styles */
+body > * {
+   outline: 2px dashed red; /* Red outline for children of the body element */
+}
 
+section > * {
+   outline: 2px dashed blue; /* Blue outline for children of the section element */
+}
