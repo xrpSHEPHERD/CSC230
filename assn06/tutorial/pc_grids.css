@@ -6,22 +6,53 @@
    
    Style Sheet for Grids used in the Pandaisia Chocolates website
    Author: Randell Fields
-   Date:   12/1/2024
+   Date: 12/1/2024
    
    Filename: pc_grids.css
-
 */
 
+/* Grid Styles for Page Body */
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "intro faq"
+        "articles faq"
+        "footer footer";
+    grid-column-gap: 15px;
+}
 
-/* Grid Rows Styles */
+/* Style for the Page Header */
+body > header {
+    grid-row: 1;
+    grid-column: 1 / -1;
+}
 
+/* Assigning Elements to Grid Areas */
+body > article {
+    grid-area: intro;
+}
 
+body > aside {
+    grid-area: faq;
+}
 
+body > section {
+    grid-area: articles;
+}
 
-/* Grid Columns Styles */
+body > footer {
+    grid-area: footer;
+}
 
+/* Grid Styles for Nested Grid */
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
-
-
-/* Grid Outline Styles */
-
+/* Placing H1 Heading */
+section > h1 {
+    grid-area: 1 / 1 / 2 / 3;
+}
