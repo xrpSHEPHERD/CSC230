@@ -6,83 +6,53 @@
    
    Style Sheet for Grids used in the Pandaisia Chocolates website
    Author: Randell Fields
-   Date:   12/1/2024
+   Date: 12/1/2024
    
    Filename: pc_grids.css
 */
 
-/* Grid Layout for Page */
+/* Grid Styles for Page Body */
 body {
-   display: grid; /* Set the body as a grid container */
-   grid-template-rows: auto 1fr auto; /* Header, main content, footer */
-   grid-template-columns: 2fr 1fr; /* Main content columns: 2:1 ratio */
-   gap: 20px; /* Space between rows and columns */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "intro faq"
+        "articles faq"
+        "footer footer";
+    grid-column-gap: 15px;
 }
 
-/* Spanning the Body Header Across the First Row */
+/* Style for the Page Header */
 body > header {
-   grid-row: 1; /* Place header in the first row */
-   grid-column: 1 / -1; /* Span header across all columns */
+    grid-row: 1;
+    grid-column: 1 / -1;
 }
 
-main {
-   display: grid; /* Set main as a grid container */
-   grid-template-rows: auto auto; /* First row for #companyInfo, second row for #nestedGrid and #faq */
-   grid-template-columns: 2fr 1fr; /* 2:1 ratio for the main content columns */
-   gap: 20px; /* Space between rows and columns */
+/* Assigning Elements to Grid Areas */
+body > article {
+    grid-area: intro;
 }
 
-#companyInfo {
-   grid-column: 1 / -1; /* Spans across both columns */
-   grid-row: 1; /* Place in the first row */
+body > aside {
+    grid-area: faq;
 }
 
-#nestedGrid {
-   grid-column: 1; /* Places the nested grid in the first column */
-   grid-row: 2; /* Place in the second row */
+body > section {
+    grid-area: articles;
 }
 
-#faq {
-   grid-column: 2; /* Places FAQ in the second column */
-   grid-row: 2; /* Place in the second row */
+body > footer {
+    grid-area: footer;
 }
 
-.nestedGrid {
-   display: grid; /* Nested grid for the articles */
-   grid-template-rows: 1fr 1fr; /* Two rows */
-   grid-template-columns: 1fr 1fr; /* Two columns with equal width */
-   gap: 10px; /* Space between nested grid items */
+/* Grid Styles for Nested Grid */
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.nestedGrid article:nth-child(1) {
-   grid-area: 1 / 1; /* Top-left */
-}
-
-.nestedGrid article:nth-child(2) {
-   grid-area: 1 / 2; /* Top-right */
-}
-
-.nestedGrid article:nth-child(3) {
-   grid-area: 2 / 1; /* Bottom-left */
-}
-
-.nestedGrid article:nth-child(4) {
-   grid-area: 2 / 2; /* Bottom-right */
-}
-
-footer {
-   grid-column: 1 / -1; /* Footer spans all columns */
-   text-align: center;
-   background-color: rgb(71, 52, 29); /* Dark brown background */
-   color: white; /* White text for contrast */
-   padding: 10px;
-}
-
-/* Grid Outline Styles for Debugging */
-body > * {
-   outline: 2px dashed red; /* Red outline for children of the body element */
-}
-
-section > * {
-   outline: 2px dashed blue; /* Blue outline for children of the section element */
+/* Placing H1 Heading */
+section > h1 {
+    grid-area: 1 / 1 / 2 / 3;
 }
