@@ -16,6 +16,8 @@
 article, aside, figcaption, figure,
 footer, header, main, nav, section {
    display: block;
+   box-sizing: border-box; /* Ensures width includes padding and borders */
+
 }
 
 /* Typographic Styles */
