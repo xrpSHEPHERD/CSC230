@@ -25,6 +25,9 @@ section.nestedGrid {
 
 
 /* Grid Columns Styles */
+body {
+   grid-template-columns: 2fr 1fr; /* First column is twice the width of the second */
+}
 
 
 
