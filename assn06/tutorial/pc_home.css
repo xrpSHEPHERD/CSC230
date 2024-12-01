@@ -10,32 +10,18 @@
    Date:   12/1/2024
    
    Filename: pc_home.css
-
 */
 
 /* Body Styles */
-
-
+body {
+   max-width: 960px;
+   min-width: 640px;
+   width: 95%;
+   margin: 0 auto; /* Centers the page horizontally */
+}
 
 /* Body Header Styles */
-
-
-
-
-/* Horizontal Navigation Styles */
-
-
-
-/* Left Column Styles */
-
-
-
-
-/* Right Column Styles */
-
-
-
-
-
-/* Footer Styles */
-
+header img {
+   display: block;
+   width: 100%;
+}

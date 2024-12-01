@@ -37,10 +37,5 @@ nav a {
    text-decoration: none;
 }
 
-body {
-   max-width: 960px;
-   min-width: 640px;
-   width: 95%;
-   margin: 0 auto; /* Centers the page horizontally */
-}
+
 
