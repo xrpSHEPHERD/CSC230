@@ -53,5 +53,20 @@ section#rightColumn > nav.horizontalNavigation li {
    text-align: center; /* Centers the text and image within the list item */
 }
 
+/* Footer Styles */
+footer {
+   clear: left; /* Ensures footer appears below floated elements */
+}
+
+footer > nav.verticalNavigation {
+   float: left;
+   width: 22%; /* Each navigation list takes 22% of the footer width */
+}
+
+footer > section#contactInfo {
+   float: left;
+   width: 34%; /* Contact info section takes 34% of the footer width */
+}
+
 
 
