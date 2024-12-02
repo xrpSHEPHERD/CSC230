@@ -1,8 +1,18 @@
 @charset "utf-8";
 
-/* Layout Style Sheet for A Soldier's Scrapbook */
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: Randell Fields
+   Date: 12/1/2024
+   
+   Filename: ss_layout.css
+*/
 
-/* ARTICLE STYLES */
+/* Article Styles */
 article {
    float: left;
    width: 384px;
@@ -22,30 +32,26 @@ article p:first-of-type::first-letter {
    margin-bottom: 5px;
 }
 
-/* ASIDE STYLES */
+/* Aside Styles */
 aside {
-   width: 768px;
    float: left;
+   width: 768px;
 }
 
-/* MAP CONTAINER STYLES */
+/* Map Styles */
 #battleMap {
    width: 688px;
-   margin: 20px auto;
    position: relative;
 }
 
 #mapImage {
-   display: block;
    width: 100%;
 }
 
-/* INTERACTIVE MAP MARKER STYLES */
 a.battleMarkers {
    position: absolute;
 }
 
-/* Marker Positions */
 #marker1 { top: 220px; left: 340px; }
 #marker2 { top: 194px; left: 358px; }
 #marker3 { top: 202px; left: 400px; }
@@ -53,9 +59,12 @@ a.battleMarkers {
 #marker5 { top: 229px; left: 498px; }
 #marker6 { top: 246px; left: 544px; }
 
-/* MAP INFORMATION STYLES */
 div.mapInfo {
    display: none;
+   background-color: rgba(255, 0, 0, 0.8);
+   padding: 10px;
+   border-radius: 5px;
+   position: absolute;
 }
 
 a.battleMarkers:hover + div.mapInfo {

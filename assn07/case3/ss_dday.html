@@ -1,101 +1,104 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!--
-      New Perspectives on HTML5 and CSS3, 7th Edition
-      Tutorial 3
-      Case Problem 3
-
-      Normandy Invasion Day 1 Page
-      Author: Randell Fields
-      Date: 12/1/2024
-      -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Normandy Invasion: Day 1</title>
-      <link rel="stylesheet" href="ss_styles.css">
-      <link rel="stylesheet" href="ss_layout.css">
-   </head>
-   <body>
-      <header>
-         <img src="ss_logo.png" alt="A Soldier's Scrapbook">
-         <nav class="horizontal">
-            <ul>
-               <li><a href="#" title="Learn about Blitzkrieg">Blitzkrieg</a></li>
-               <li><a href="#" title="Learn about the Battle of Britain">Battle of Britain</a></li>
-               <li><a href="#" title="Learn about the Normandy Invasion">Normandy Invasion</a></li>
-               <li><a href="#" title="Learn about Operation Market Garden">Market Garden</a></li>
-               <li><a href="#" title="Learn about the Fall of Berlin">Fall of Berlin</a></li>
-               <li><a href="#" title="Learn about Postwar Upheaval">Postwar Upheaval</a></li>
-            </ul>
-         </nav>
-      </header>
-      
+<head>
+   <!--
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Normandy Invasion Day 1 Page
+   Author: Randell Fields
+   Date: 12/1/2024
+   
+   Filename: ss_dday.html
+   -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Normandy Invasion: Day 1</title>
+   <link rel="stylesheet" href="ss_styles.css">
+   <link rel="stylesheet" href="ss_layout.css">
+</head>
+<body>
+   <header>
+      <img src="ss_logo.png" alt="A Soldier's Scrapbook">
+      <nav class="horizontal">
+         <ul>
+            <li><a href="#">Blitzkrieg</a></li>
+            <li><a href="#">Battle of Britain</a></li>
+            <li><a href="#">Normandy Invasion</a></li>
+            <li><a href="#">Market Garden</a></li>
+            <li><a href="#">Fall of Berlin</a></li>
+            <li><a href="#">Postwar Upheaval</a></li>
+         </ul>
+      </nav>
+   </header>
+   <section>
       <article>
          <h1>The Normandy Invasion</h1>
          <p>The invasion on the beaches of Normandy on June 6, 1944, was the largest air, land, and sea operation 
             undertaken before or since June 6, 1944. <em>Operation Overlord</em> involved over 150,000 servicemen 
             stationed on over 5,000 ships and 11,000 airplanes. The initial wave of soldiers on the beaches had 
             to cover over 200 yards of small-arms fire and artillery before reaching any protection. Casualties 
-            were immense: 4,000 men died on the beaches, and 6,000 were wounded.
-         </p>
+            were immense: 4,000 men died on the beaches, and 6,000 were wounded.</p>
+         <p>The landing beaches were intended to provide footholds that would allow rapid reinforcement and expansion 
+            inland by joining the beach flanks to create a continuous perimeter before the enemy could mount a 
+            major counter-attack. Each beach would be assaulted by approximately one army division, with 
+            initial landings made from 6:30 a.m. to 7:30 a.m. Their beach landings followed bombardment by 
+            ships' guns and aircraft ordnance, kept brief to maintain as much as possible of the element of 
+            surprise. As a result, German shore defenses remained intact and a threat to the landing forces.</p>
+         <p>Supporting the beach landings, especially at Omaha Beach, the U.S. 82nd and 101st Airborne Divisions 
+            descended behind enemy lines in the early hours of D-Day. Though badly scattered and lacking much of 
+            their equipment, the paratroopers kept the Germans occupied and helped ensure that the beach assaults 
+            were successful. By nightfall on the sixth of June, the beaches were secured and the liberation of 
+            the European continent had begun.</p>
       </article>
-      
       <aside>
          <h1>Interactive Map</h1>
-         <p>Hover the pointer over the battle markers 
-            <img src="ss_marker.png" alt="Battle marker"> in the map to view more detailed information about each landing site.
-         </p>
+         <p>Hover the pointer over the battle markers <img src="ss_marker.png" alt="Battle marker"> in the map to view more detailed information about each landing site.</p>
          <div id="battleMap">
             <img src="ss_map.png" id="mapImage" alt="Battle map of Normandy">
-
             <!-- Marker 1 -->
-            <a id="marker1" class="battleMarkers" href="#marker1" title="More information about Sainte-Mère-Église">
+            <a id="marker1" class="battleMarkers" href="#info1">
                <img src="ss_marker.png" alt="Marker for Sainte-Mère-Église">
             </a>
             <div class="mapInfo" id="info1">
                <h2>Sainte-Mère-Église</h2>
-               <p>The 82nd Infantry Division mistakenly landed directly in the town of Sainte-Mère-Église...</p>
+               <p>The 82nd Infantry Division mistakenly landed directly in the town...</p>
             </div>
-
             <!-- Marker 2 -->
-            <a id="marker2" class="battleMarkers" href="#marker2" title="More information about Utah Beach">
+            <a id="marker2" class="battleMarkers" href="#info2">
                <img src="ss_marker.png" alt="Marker for Utah Beach">
             </a>
             <div class="mapInfo" id="info2">
                <h2>Utah Beach</h2>
-               <p>Utah Beach was a staging area to secure the important port facilities at Cherbourg...</p>
+               <p>Utah Beach was a staging area to secure the important port facilities...</p>
             </div>
-
             <!-- Marker 3 -->
-            <a id="marker3" class="battleMarkers" href="#marker3" title="More information about Omaha Beach">
+            <a id="marker3" class="battleMarkers" href="#info3">
                <img src="ss_marker.png" alt="Marker for Omaha Beach">
             </a>
             <div class="mapInfo" id="info3">
                <h2>Omaha Beach</h2>
                <p>Very little went according to plan at Omaha Beach...</p>
             </div>
-
             <!-- Marker 4 -->
-            <a id="marker4" class="battleMarkers" href="#marker4" title="More information about Gold Beach">
+            <a id="marker4" class="battleMarkers" href="#info4">
                <img src="ss_marker.png" alt="Marker for Gold Beach">
             </a>
             <div class="mapInfo" id="info4">
                <h2>Gold Beach</h2>
-               <p>The British landing at Gold Beach was designed to link up with forces at Omaha Beach...</p>
+               <p>The British landing at Gold Beach was designed to link up with forces...</p>
             </div>
-
             <!-- Marker 5 -->
-            <a id="marker5" class="battleMarkers" href="#marker5" title="More information about Juno Beach">
+            <a id="marker5" class="battleMarkers" href="#info5">
                <img src="ss_marker.png" alt="Marker for Juno Beach">
             </a>
             <div class="mapInfo" id="info5">
                <h2>Juno Beach</h2>
                <p>Juno Beach had the objective to seize the Carpiquet airport west of Caen...</p>
             </div>
-
             <!-- Marker 6 -->
-            <a id="marker6" class="battleMarkers" href="#marker6" title="More information about Sword Beach">
+            <a id="marker6" class="battleMarkers" href="#info6">
                <img src="ss_marker.png" alt="Marker for Sword Beach">
             </a>
             <div class="mapInfo" id="info6">
@@ -104,7 +107,66 @@
             </div>
          </div>
       </aside>
-      
-      <footer>Raleigh Veteran's Museum</footer>
-   </body>
+   </section>
+   <footer>Raleigh Veteran's Museum</footer>
+</body>
 </html>
+CSS (ss_layout.css)
+/* Article Styles */
+article {
+   float: left;
+   width: 384px;
+}
+
+article p:first-of-type::first-line {
+   font-size: 1.25em;
+   font-variant: small-caps;
+}
+
+article p:first-of-type::first-letter {
+   font-size: 4em;
+   font-family: serif;
+   float: left;
+   line-height: 0.8em;
+   margin-right: 5px;
+   margin-bottom: 5px;
+}
+
+/* Aside Styles */
+aside {
+   float: left;
+   width: 768px;
+}
+
+/* Map Styles */
+#battleMap {
+   width: 688px;
+   position: relative;
+}
+
+#mapImage {
+   width: 100%;
+}
+
+a.battleMarkers {
+   position: absolute;
+}
+
+#marker1 { top: 220px; left: 340px; }
+#marker2 { top: 194px; left: 358px; }
+#marker3 { top: 202px; left: 400px; }
+#marker4 { top: 217px; left: 452px; }
+#marker5 { top: 229px; left: 498px; }
+#marker6 { top: 246px; left: 544px; }
+
+div.mapInfo {
+   display: none;
+   background-color: rgba(255, 0, 0, 0.8);
+   padding: 10px;
+   border-radius: 5px;
+   position: absolute;
+}
+
+a.battleMarkers:hover + div.mapInfo {
+   display: block;
+}
