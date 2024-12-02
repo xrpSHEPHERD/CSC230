@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/* Layout Style Sheet for A Soldier's Scrapbook */
+
+/* ARTICLE STYLES */
+article {
+   float: left;
+   width: 384px;
+}
+
+article p:first-of-type::first-line {
+   font-size: 1.25em;
+   font-variant: small-caps;
+}
+
+article p:first-of-type::first-letter {
+   font-size: 4em;
+   font-family: serif;
+   float: left;
+   line-height: 0.8em;
+   margin-right: 5px;
+   margin-bottom: 5px;
+}
+
+/* ASIDE STYLES */
+aside {
+   width: 768px;
+   float: left;
+}
+
+/* MAP CONTAINER STYLES */
+#battleMap {
+   width: 688px;
+   margin: 20px auto;
+   position: relative;
+}
+
+#mapImage {
+   display: block;
+   width: 100%;
+}
+
+/* INTERACTIVE MAP MARKER STYLES */
+a.battleMarkers {
+   position: absolute;
+}
+
+/* Marker Positions */
+#marker1 { top: 220px; left: 340px; }
+#marker2 { top: 194px; left: 358px; }
+#marker3 { top: 202px; left: 400px; }
+#marker4 { top: 217px; left: 452px; }
+#marker5 { top: 229px; left: 498px; }
+#marker6 { top: 246px; left: 544px; }
+
+/* MAP INFORMATION STYLES */
+div.mapInfo {
+   display: none;
+}
+
+a.battleMarkers:hover + div.mapInfo {
+   display: block;
+}
