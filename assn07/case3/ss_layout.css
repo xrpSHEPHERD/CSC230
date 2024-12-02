@@ -4,60 +4,59 @@
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 3
    Case Problem 3
-   
+
    Layout Style Sheet for A Soldier's Scrapbook
    Author: Randell Fields
-   Date:   12/1/2024
-   
-   Filename: ss_layout.css
+   Date: 12/1/2024
 
+   Filename: ss_layout.css
 */
 
-
-/* Article Styles */
+/* ARTICLE STYLES */
 article {
-   float: left;
-   width: 384px;
+   float: left; /* Align article to the left */
+   width: 384px; /* Fixed width for article */
 }
 
 /* First Line and Drop Cap Styles */
 article p:first-of-type::first-line {
-   font-size: 1.25em;
-   font-variant: small-caps;
+   font-size: 1.25em; /* Slightly larger text */
+   font-variant: small-caps; /* Convert text to small caps */
 }
 
 article p:first-of-type::first-letter {
-   font-size: 4em;
-   font-family: serif;
-   float: left;
-   line-height: 0.8em;
-   margin-right: 5px;
-   margin-bottom: 5px;
+   font-size: 4em; /* Drop cap size */
+   font-family: serif; /* Serif font for the drop cap */
+   float: left; /* Float the first letter */
+   line-height: 0.8em; /* Adjust line height for proper alignment */
+   margin-right: 5px; /* Spacing to the right of the letter */
+   margin-bottom: 5px; /* Spacing below the letter */
 }
 
-/* Aside Styles */
+/* ASIDE STYLES */
 aside {
-   width: 768px;
-   float: left;
+   width: 768px; /* Fixed width for the aside */
+   float: left; /* Align aside next to the article */
 }
 
-/* Map Styles */
+/* MAP CONTAINER STYLES */
 #battleMap {
-   width: 688px;
-   margin: 20px auto;
-   position: relative;
+   width: 688px; /* Fixed width for the map container */
+   margin: 20px auto; /* Center the map with top/bottom margin */
+   position: relative; /* Enable positioning of child elements */
 }
 
 #mapImage {
-   display: block;
-   width: 100%;
+   display: block; /* Ensure the map is treated as a block element */
+   width: 100%; /* Scale the image to fit the container width */
 }
 
-/* Interactive Map Styles */
+/* INTERACTIVE MAP MARKER STYLES */
 a.battleMarkers {
-   position: absolute;
+   position: absolute; /* Position markers within the map container */
 }
 
+/* Marker Positions */
 #marker1 {
    top: 220px;
    left: 340px;
@@ -88,11 +87,12 @@ a.battleMarkers {
    left: 544px;
 }
 
-/* Map Information Styles */
+/* MAP INFORMATION STYLES */
 div.mapInfo {
-   display: none;
+   display: none; /* Hide map information by default */
 }
 
+/* Display map information on hover */
 a.battleMarkers:hover + div.mapInfo {
-   display: block;
+   display: block; /* Reveal map info when hovering over a marker */
 }
