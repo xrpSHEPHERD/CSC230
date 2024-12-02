@@ -16,10 +16,10 @@ html {
    height: 100%;
 }
 
-/* Body Styles */
 body {
    display: grid; /* Enables grid layout */
    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+   grid-template-rows: auto; /* Automatically adjust row heights */
    width: 95%; /* Responsive width between 640px and 960px */
    max-width: 960px;
    min-width: 640px;
@@ -32,50 +32,117 @@ img {
 }
 
 /* Page Header Styles */
-#logo {
-   grid-column: span 3; /* Spans three columns in the grid */
-   width: 100%; /* Ensures the logo image scales properly */
+header {
+   grid-column: span 4; /* Spans all columns */
+   display: grid;
+   grid-template-columns: 3fr 1fr; /* Logo takes 3/4 of space, navigation takes 1/4 */
+   align-items: center; /* Vertically centers content */
+   gap: 10px;
 }
 
-/* Horizontal Navigation List Styles */
-nav.horizontal, footer {
-   grid-column: span 4; /* Makes navigation and footer span all 4 columns */
+#logo {
+   width: 100%; /* Ensures the logo image scales properly */
+   grid-column: 1; /* Places the logo in the first column */
+}
+
+header nav {
+   grid-column: 2; /* Places navigation in the second column */
+   text-align: right;
+}
+
+header nav ul {
+   display: flex;
+   flex-direction: column;
+   gap: 5px; /* Adds spacing between links */
+}
+
+/* Horizontal Navigation Styles */
+nav.horizontal {
+   grid-column: span 4; /* Spans all columns */
+   display: flex;
+   justify-content: space-evenly; /* Distributes items evenly */
+   background-color: rgb(18, 31, 102);
+   padding: 10px 0;
+}
+
+nav.horizontal ul {
+   display: flex;
+   justify-content: space-evenly; /* Distributes items evenly */
+   width: 100%;
 }
 
 nav.horizontal ul li {
-   display: block;
-   width: 12.5%; /* Ensures 8 items fit in one row */
-   float: left; /* Aligns items to the left */
+   list-style: none;
+   text-align: center;
+}
+
+nav.horizontal a {
+   color: rgb(250, 238, 218);
+   text-decoration: none;
+   font-size: 0.9em;
+}
+
+nav.horizontal a:hover {
+   color: rgb(255, 255, 64);
 }
 
 /* Topics Styles */
-section img {
-   width: 50%; /* Limits image width to 50% of its container */
-   margin: 0 auto; /* Centers the image horizontally */
+ul#topics {
+   grid-column: span 4; /* Spans all columns */
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); /* Four equal columns for topics */
+   gap: 20px; /* Adds spacing between topics */
+   margin: 20px 0;
 }
 
-section p {
-   width: 70%; /* Sets paragraph width */
-   margin: 0 auto; /* Centers the paragraph */
+ul#topics li {
+   text-align: center;
 }
 
-/* Customer Comment Styles */
-aside {
-   width: 75%; /* Width of each customer comment aside */
-   padding-bottom: 30px; /* Adds bottom padding for spacing */
+ul#topics img {
+   width: 50%; /* Centers the topic icons */
+   margin: 0 auto;
 }
 
-aside:nth-of-type(odd) {
-   justify-self: end; /* Aligns odd-numbered asides to the right */
+ul#topics p {
+   margin-top: 10px;
+   font-size: 0.8em;
+   color: rgb(95, 114, 232);
 }
 
-aside img {
+/* Customer Comments Styles */
+ul#comments {
+   grid-column: span 4; /* Spans all columns */
+   display: grid;
+   grid-template-columns: 1fr 1fr; /* Two columns for comments */
+   gap: 20px; /* Adds spacing between comments */
+}
+
+ul#comments li {
+   display: flex;
+   gap: 10px; /* Adds spacing between image and text */
+   align-items: center; /* Aligns content vertically */
+}
+
+ul#comments img {
    float: left; /* Floats the image to the left */
-   width: 20%; /* Sets the width to 20% of the aside's container */
+   width: 20%; /* Image takes 20% of the space */
 }
 
-aside p {
-   float: left; /* Floats the paragraph to the left */
-   width: 75%; /* Sets the paragraph width to 75% of the aside */
-   margin-left: 5%; /* Adds spacing between the image and text */
+ul#comments p {
+   width: 75%; /* Paragraph takes the remaining space */
+   margin-left: 5%;
+   font-size: 0.9em;
+   color: rgb(121, 121, 121);
+   line-height: 1.2em;
+}
+
+/* Footer Styles */
+footer {
+   grid-column: span 4; /* Spans all columns */
+   text-align: center;
+   background-color: rgb(44, 91, 169);
+   color: rgb(186, 186, 156);
+   padding: 10px;
+   font-size: 0.9em;
 }
