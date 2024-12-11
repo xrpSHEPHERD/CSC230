@@ -5,15 +5,16 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    color: #333;
+    color: #ffffff;
+    background-color: #101010;
 }
 
 /* Header */
 header {
     background-color: #000000;
-    text-align: center;
+    text-align: left; /* Left-aligned text */
     padding: 1rem;
-    color: #fff;
+    color: #00ffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
@@ -21,25 +22,26 @@ header {
     z-index: 1000;
 }
 
-/* Navigation */
-nav {
-    background-color: #5c5c5c;
-    width: 20%;
-    box-sizing: border-box;
-    border-right: 2px solid #e5e5e5;
-    overflow-y: auto;
-    font-size: 0.9rem; /* Reduced font size */
-    flex-shrink: 0; /* Prevents shrinking of the nav box */
-    height: calc(100vh - 5rem); /* Spans from header to footer */
-    position: fixed;
-    top: 5rem; /* Start below the header */
-    left: 0;
-    display: flex; /* Flexbox for centering */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
+header h1, header h2, header p {
+    margin-left: 2rem;
 }
 
-/* Navigation List */
+/* Navigation */
+nav {
+    background-color: #202020;
+    width: 20%;
+    padding: 1rem;
+    position: fixed;
+    top: 5rem; /* Below header */
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    border-right: 3px solid #00ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -47,66 +49,43 @@ nav ul {
 }
 
 nav ul li {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: #00ffff;
     display: block;
-    padding: 0.5rem;
-    background-color: #333;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
     text-align: center;
+    padding: 0.5rem;
+    border: 2px solid #00ffff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #000000;
+    background-color: #00ffff;
+    color: #000000;
 }
 
 /* Main Content */
 .main-layout {
     display: flex;
-    margin-left: 20%; /* Space for the fixed nav */
-    width: 80%; /* Ensures content fills remaining space */
-    height: calc(100vh - 5rem); /* Content fits between header and footer */
-    margin-top: 5rem; /* Push content below header */
+    margin-left: 20%; /* Leave space for nav */
+    width: 80%;
+    height: calc(100vh - 5rem); /* Adjust for header height */
+    margin-top: 15rem; /* Push below header */
     box-sizing: border-box;
-    overflow-y: auto;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
 }
 
 main {
     flex: 1;
-    background-color: #f8f8f8;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Column layout for sections */
-    align-items: left; /* Center-align sections */
-    justify-content: center; /* Vertically center */
-}
-
-main section {
-    margin-bottom: 2rem;
-    text-align: center; /* Center-align text content */
-}
-
-main section h3 {
-    color: #333;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-main img {
-    display: block;
-    margin: 1rem auto; /* Center-align the image */
-    max-width: 100%;
-    height: auto;
+    background-color: #181818;
+    padding: 2rem 3rem; /* Add padding for better spacing */
+    margin: 1rem; /* Add margin to contain content */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left; /* Left-align main content */
 }
 
 /* Footer */
@@ -114,10 +93,13 @@ footer {
     background-color: #000000;
     text-align: center;
     padding: 1rem;
-    color: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    color: #00ffff;
     position: fixed;
     width: 100%;
     bottom: 0;
     z-index: 1000;
+}
+
+footer p {
+    margin: 0;
 }
