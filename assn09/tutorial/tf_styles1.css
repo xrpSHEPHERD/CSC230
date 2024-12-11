@@ -88,10 +88,20 @@ ul.mainmenu > li:first-of-type a {
    background-color: rgb(31, 73, 125);
 }
 
-/* Submenu Styles */
+/* Pulldown Menu Styles */
 ul.submenu {
-   width: 100%;
+   display: none; /* Initially hide submenus */
    background-color: rgb(181, 204, 136);
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+a.submenuTitle:hover + ul.submenu,
+ul.submenu:hover {
+   display: block; /* Show submenu on hover */
+   position: absolute;
+   z-index: 1000;
 }
 
 /* Section Styles */
@@ -135,7 +145,16 @@ body > footer {
    Mobile Styles: 0 to 480px
    =========================== */
 @media only screen and (max-width: 480px) {
-   /* Add mobile-specific styles here */
+   /* Increase font size of navigation links for better touch accessibility */
+   nav.horizontal a {
+      font-size: 1.5em;
+      line-height: 2.2em;
+   }
+
+   /* Hide customer comments in the aside element */
+   aside {
+      display: none;
+   }
 }
 
 /* ===============================
