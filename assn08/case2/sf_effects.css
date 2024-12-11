@@ -20,6 +20,10 @@ body {
 
 
 /* Navigation Tabs List Styles */
+body > header nav.tabs {
+   background: url(sf_back1.png) no-repeat center center;
+   background-size: cover;
+}
 
 
 
