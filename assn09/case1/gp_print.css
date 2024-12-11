@@ -11,29 +11,36 @@
 
    This file contains the printer styles used with the sample
    comic book pages from Golden Pulps.
-
 */
 
-
-
 /* Hidden Objects */
-
-
-
-
-
-
+nav.horizontal,
+footer,
+article {
+   display: none; /* Hide navigation, footer, and article content for print */
+}
 
 /* Comic Book Sheet Styles */
+section#sheet {
+   width: 6in; /* Center comic book panels on the printed page */
+   margin: 0 auto; /* Horizontally center */
+   margin-top: 0; /* Remove top margin */
+   margin-bottom: 0; /* Remove bottom margin */
+}
 
+/* Panel Image Sizes */
+.size1 img {
+   width: 5in; /* Largest panel size for printing */
+}
 
+.size2 img {
+   width: 3in; /* Medium-large panel size */
+}
 
+.size3 img {
+   width: 2in; /* Medium-small panel size */
+}
 
-
-
-
-
-
-
-
-
+.size4 img {
+   width: 1.5in; /* Smallest panel size */
+}
