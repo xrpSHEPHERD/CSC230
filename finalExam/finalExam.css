@@ -65,7 +65,9 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: calc(100vh - 5rem); /* Adjusted height to make it scrollable */
 }
+
 
 nav ul {
     list-style: none;
