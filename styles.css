@@ -1,112 +1,168 @@
+/* Header */
+header {
+    background-color: #000000;
+    padding: 1rem;
+    color: #00ffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+
 /* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    color: #333;
+    min-height: 100vh;
+    color: #ffffff;
+    background-color: #101010;
 }
 
 /* Header */
 header {
     background-color: #000000;
-    text-align: center;
     padding: 1rem;
-    color: #fff;
+    color: #00ffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    position: fixed;
     top: 0;
     z-index: 1000;
 }
 
 /* Navigation */
 nav {
-    background-color: #5c5c5c;
+    background-color: #202020;
     width: 20%;
-    box-sizing: border-box;
-    border-right: 2px solid #e5e5e5;
-    overflow-y: auto;
-    font-size: 0.9rem; /* Reduced font size */
-    flex-shrink: 0; /* Prevents shrinking of the nav box */
-    height: calc(100vh - 5rem); /* Spans from header to footer */
+    padding: 1rem;
     position: fixed;
-    top: 5rem; /* Start below the header */
+    top: 5rem;
+    bottom: 0;
     left: 0;
-    display: flex; /* Flexbox for centering */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
+    overflow-y: auto;
+    border-right: 3px solid #00ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 5rem); /* Adjusted height to make it scrollable */
 }
 
-/* Navigation List */
+
 nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin-bottom: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00ffff;
+    text-align: center;
+    padding: 0.5rem;
+    border: 2px solid #00ffff;
+    border-radius: 4px;
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #00ffff;
+    color: #000000;
+}
+
+/* Weeks and Projects Section */
+#CSC230-Website-Design-Fall-2024 {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#weeks-projects h2 {
+    text-align: center;
+    color: #00ffff;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #202020;
+    border: 3px solid #00ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    padding: 2rem;
+    margin: 1.5rem; /* Adjusted for better visibility */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 255, 255, 0.5);
+}
+
+.card h3 {
+    color: #00ffff;
+    text-align: center;
+}
+
+.card ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
-    margin: 1rem 0;
+.card li {
+    color: #ffffff;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    display: block;
-    padding: 0.5rem;
-    background-color: #333;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    text-align: center;
+.card li:last-child {
+    border-bottom: none;
 }
 
-nav ul li a:hover {
-    background-color: #000000;
+/* About Me Section */
+.about-me {
+    margin: 2rem;
+    padding: 2rem;
 }
 
-/* Main Content */
+/* Main Layout */
 .main-layout {
     display: flex;
-    margin-left: 20%; /* Space for the fixed nav */
-    width: 80%; /* Ensures content fills remaining space */
-    height: calc(100vh - 5rem); /* Content fits between header and footer */
-    margin-top: 5rem; /* Push content below header */
-    box-sizing: border-box;
-    overflow-y: auto;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-}
-
-main {
-    flex: 1;
-    background-color: #f8f8f8;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    display: flex; /* Flexbox for centering */
-    flex-direction: column; /* Column layout for sections */
-    align-items: left; /* Center-align sections */
-    justify-content: center; /* Vertically center */
-}
-
-main section {
-    margin-bottom: 2rem;
-    text-align: center; /* Center-align text content */
-}
-
-main section h3 {
-    color: #333;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-main img {
-    display: block;
-    margin: 1rem auto; /* Center-align the image */
-    max-width: 100%;
-    height: auto;
+    margin-left: 20%;
+    margin-top: 5rem;
+    padding: 2rem;
 }
 
 /* Footer */
@@ -114,10 +170,9 @@ footer {
     background-color: #000000;
     text-align: center;
     padding: 1rem;
-    color: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    color: #00ffff;
     width: 100%;
+    position: fixed;
     bottom: 0;
     z-index: 1000;
 }
